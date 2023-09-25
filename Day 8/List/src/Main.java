@@ -8,8 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        printActions();
         while (scanner.hasNextLine()){
+            printActions();
             int i = Integer.parseInt(scanner.nextLine());
             if (i == 6){
                 break;
@@ -17,18 +17,18 @@ public class Main {
 
             switch (i){
                 case 1:
-                    System.out.println("Insert item: ");
+                    System.out.println("Insert the item you want to add to the list: ");
                     addItem(scanner.nextLine());
                     break;
                 case 2:
-                    System.out.println("Insert item: ");
+                    System.out.println("Insert the item you want to remove from the list: ");
                     removeItem(scanner.nextLine());
                     break;
                 case 3:
-                    print();
+                    printGroceryList();
                     break;
                 case 4:
-                    System.out.println("Insert item: ");
+                    System.out.println("Find item: ");
                     findItem(scanner.nextLine());
                     break;
                 case 5:
@@ -63,7 +63,7 @@ public class Main {
         System.out.println(groceryList.contains(item) ? "there is " + item + " on the list." : item + " is not included.");
     }
 
-    private static void print(){
+    private static void printGroceryList(){
         System.out.println("Grocery list: ");
         for (String item : groceryList){
             System.out.println(item);
