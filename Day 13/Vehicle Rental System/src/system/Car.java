@@ -8,7 +8,13 @@ public class Car extends Vehicle{
         this.numberOfSeats = numberOfSeats;
     }
 
-    public int getNumberOfSeats(){
+    private int getNumberOfSeats(){
         return numberOfSeats;
+    }
+
+    @Override
+    public void printVehicleInformation(){
+        System.out.println("Number of seats: " + getNumberOfSeats());
+        super.printVehicleInformation();
     }
 }

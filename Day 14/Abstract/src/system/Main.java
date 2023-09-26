@@ -118,7 +118,7 @@ public class Main {
         if (!wasRemoved){
             System.out.println("No item was removed.");
         } else {
-            System.out.println("Car has been removed from the inventory.");
+            System.out.println("Vehicle has been removed from the inventory.");
         }
     }
 

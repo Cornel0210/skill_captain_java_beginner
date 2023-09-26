@@ -8,7 +8,13 @@ public class Motorcycle extends Vehicle{
         this.engineCapacity = engineCapacity;
     }
 
-    public int getEngineCapacity(){
+    private int getEngineCapacity(){
         return engineCapacity;
+    }
+
+    @Override
+    public void printVehicleInformation(){
+        System.out.println("Engine capacity: " + getEngineCapacity());
+        super.printVehicleInformation();
     }
 }
