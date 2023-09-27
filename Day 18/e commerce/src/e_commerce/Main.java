@@ -22,7 +22,7 @@ public class Main {
 
             switch (getInt()){
                 case 1:
-                    repository.addUser(getUser());
+                    repository.addUser(getNewUser());
                     break;
                 case 2:
                     System.out.println("Enter the email address:");
@@ -63,7 +63,7 @@ public class Main {
                 .matches();
     }
 
-    private static User getUser(){
+    private static User getNewUser(){
         System.out.println("Enter your name: ");
         String name = getString();
         System.out.println("Enter your email: ");

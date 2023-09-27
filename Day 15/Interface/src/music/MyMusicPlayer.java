@@ -99,6 +99,7 @@ public class MyMusicPlayer implements MusicPlayer{
     public void shuffle(){
         if (songs.size() > 1){
             Collections.shuffle(songs);
+            currentSong = songs.get(0);
         }
     }
 

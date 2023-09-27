@@ -13,16 +13,22 @@ public class Main {
             String data;
             while ((data = bufferedReader.readLine())!= null){
                 String[] words = data.trim().split(" ");
-                for (String word : words){
-                    word = word.trim().replaceAll("\\W", "");
-                    if (word.equalsIgnoreCase("java")){
-                        count++;
-                    }
-                }
+                count = getWordOccurrences(words, "Java");
             }
         } catch (IOException e){
             e.printStackTrace();
         }
         System.out.println("Total occurrences of 'Java': " + count);
+    }
+
+    private static int getWordOccurrences(String[] words, String target){
+        int count = 0;
+        for (String word : words){
+            word = word.trim().replaceAll("\\W", "");
+            if (word.equalsIgnoreCase("java")){
+                count++;
+            }
+        }
+        return count;
     }
 }
